@@ -1,0 +1,9 @@
+# Globals
+.turbo/
+**/.next/
+**/dist/
+**/node_modules/
+**/.env
+**/.devmode.json
+**/.DS_Store
+**/target/

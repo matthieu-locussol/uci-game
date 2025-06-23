@@ -1,0 +1,42 @@
+{
+  "name": "website",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "build:noci": "next build",
+    "clean": "rm -rf .next && rm -rf node_modules",
+    "lint": "eslint",
+    "start": "next start"
+  },
+  "author": "Matthieu Locussol <dev.matthieu.locussol@gmail.com> (https://www.matthieu-locussol.com)",
+  "license": "MIT",
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^6.3.1",
+    "@mui/material": "^6.3.1",
+    "next": "^15.1.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "zod": "^3.25.67"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@eslint/compat": "^1.2.8",
+    "@eslint/js": "^9.22.0",
+    "@types/node": "^24.0.3",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "eslint": "^9.22.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "eslint-plugin-unused-imports": "^4.1.4",
+    "globals": "^16.2.0",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.34.1"
+  }
+}
