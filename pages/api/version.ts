@@ -48,7 +48,7 @@ const handler = async (_: NextRequest) => {
     return new Response(
       JSON.stringify({
         version: tag_name,
-        notes: `Taktix ${tag_name}`,
+        notes: `Unforeseen Conspiracy Inc. ${tag_name}`,
         pub_date: published_at,
         platforms: (
           await Promise.all(

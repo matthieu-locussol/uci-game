@@ -14,7 +14,6 @@ import { useState } from "react";
 import { ConditionalWrapper } from "../components/ConditionalWrapper";
 import { CustomButton } from "../components/CustomButton";
 import { StyledTab, StyledTabs } from "../components/CustomTabs";
-import { DiscordIcon } from "../components/DiscordIcon";
 import { OsIcons } from "../components/OsIcon";
 
 const features = [
@@ -109,7 +108,7 @@ const screens = [
   },
 ];
 
-const SCREENSHOT_WIDTH = 640;
+const SCREENSHOT_WIDTH = 800;
 
 interface IndexPageProps {
   date: string;
@@ -163,7 +162,7 @@ const IndexPage = ({ version, date, platforms }: IndexPageProps) => {
               sx={{ mb: 2 }}
               variant="h3"
             >
-              Taktix
+              Unforeseen Conspiracy Inc.
             </Typography>
             <Typography
               color="white"
@@ -174,7 +173,7 @@ const IndexPage = ({ version, date, platforms }: IndexPageProps) => {
             </Typography>
           </Box>
           <Typography color="white" sx={{ opacity: 0.7 }} variant="h6">
-            The crapiest MMORPG ever.
+            Pigeons are watching you.
           </Typography>
           <Typography
             color="white"
@@ -229,7 +228,7 @@ const IndexPage = ({ version, date, platforms }: IndexPageProps) => {
               condition={!atLeastOneIsUpdating}
               wrapper={(children) => (
                 <Link
-                  href="https://github.com/matthieu-locussol/taktix-app/releases/latest"
+                  href="https://github.com/matthieu-locussol/unforeseen-conspiracy-inc/releases/latest"
                   rel="noreferrer"
                   sx={{
                     textDecoration: "none",
@@ -248,6 +247,11 @@ const IndexPage = ({ version, date, platforms }: IndexPageProps) => {
                 disabled={atLeastOneIsUpdating}
                 size="large"
                 startIcon={<DownloadsIcon sx={{ fontSize: 20, mr: 1 }} />}
+                sx={{
+                  textDecoration: "none",
+                  width: "100%",
+                  gridColumn: { md: "span 2", sm: "span 1" },
+                }}
                 variant="contained"
               >
                 <Typography
@@ -261,12 +265,12 @@ const IndexPage = ({ version, date, platforms }: IndexPageProps) => {
           <Box
             display="grid"
             gap={2}
-            gridTemplateColumns="1fr 1fr"
+            gridTemplateColumns="1fr"
             justifyItems="center"
             sx={{ position: "fixed", bottom: 16, right: 16 }}
           >
             <Link
-              href="https://github.com/matthieu-locussol/taktix-app"
+              href="https://github.com/matthieu-locussol/unforeseen-conspiracy-inc"
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -286,27 +290,6 @@ const IndexPage = ({ version, date, platforms }: IndexPageProps) => {
                 <GitHubIcon />
               </CustomButton>
             </Link>
-            <Link
-              href="https://discord.gg/9a9EVKTMkX"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <CustomButton
-                sx={{
-                  p: 1,
-                  minWidth: 0,
-                  borderRadius: 9999,
-                  borderColor: "#5865F2",
-                  backgroundColor: "#5865F2",
-                  "&:hover": {
-                    backgroundColor: "#5865F2AA",
-                  },
-                }}
-                variant="contained"
-              >
-                <DiscordIcon />
-              </CustomButton>
-            </Link>
           </Box>
         </Container>
       </Box>
@@ -319,7 +302,6 @@ const IndexPage = ({ version, date, platforms }: IndexPageProps) => {
           >
             <StyledTab label="About" value={1} />
             <StyledTab label="Screenshots" value={2} />
-            <StyledTab label="Credits" value={3} />
           </StyledTabs>
         </Box>
         <Container
@@ -335,139 +317,14 @@ const IndexPage = ({ version, date, platforms }: IndexPageProps) => {
           }}
         >
           {value === 1 && (
-            <>
-              <Typography sx={{ mb: 2, width: "100%" }} textAlign="justify">
-                Taktix is an attempt to create a web-based MMORPG using
-                TypeScript and Phaser 3. The game is open source under the{" "}
-                <Link
-                  href="https://github.com/matthieu-locussol/taktix-app?tab=GPL-3.0-1-ov-file"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <b>GPL-3.0 licence</b>
-                </Link>{" "}
-                and still in development.
-              </Typography>
-              <Typography sx={{ mb: 2, width: "100%" }} textAlign="justify">
-                I developed this project to learn more about game development
-                and to have fun. The game is not meant to be taken seriously and
-                probably contains some bugs and glitches. The non exhaustive
-                list of technologies used in this game is:{" "}
-                <Link
-                  href="https://www.typescriptlang.org/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  TypeScript
-                </Link>
-                ,{" "}
-                <Link
-                  href="https://phaser.io/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Phaser 3
-                </Link>
-                ,{" "}
-                <Link
-                  href="https://annoraaq.github.io/grid-engine/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Grid-Engine
-                </Link>
-                ,{" "}
-                <Link
-                  href="https://react.dev/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  React
-                </Link>
-                ,{" "}
-                <Link
-                  href="https://colyseus.io/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Colyseus
-                </Link>
-                ,{" "}
-                <Link
-                  href="https://mobx.js.org/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  MobX
-                </Link>
-                ,{" "}
-                <Link
-                  href="https://www.i18next.com/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  i18next
-                </Link>
-                ,{" "}
-                <Link
-                  href="https://zod.dev/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Zod
-                </Link>
-                ,{" "}
-                <Link
-                  href="https://tauri.app/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Tauri
-                </Link>
-                ,{" "}
-                <Link
-                  href="https://mui.com/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Material UI
-                </Link>
-                ,{" "}
-                <Link
-                  href="https://www.prisma.io/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Prisma
-                </Link>{" "}
-                and{" "}
-                <Link
-                  href="https://www.mapeditor.org/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Tiled
-                </Link>
-                .
-              </Typography>
-              <Typography sx={{ width: "100%" }} textAlign="justify">
-                Here is a non-exhaustive list of features that are implemented:
-              </Typography>
-              <ul style={{ width: "100%" }}>
-                {features.map((feature) => (
-                  <li key={feature} style={{ marginBottom: 8 }}>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-            </>
+            <Typography sx={{ mb: 2, width: "100%" }} textAlign="justify">
+              Unravel conspiracies both mundane and monstrous, from government
+              cover-ups to why pigeons seem so... shifty. Click onward, the
+              rabbit hole awaits!
+            </Typography>
           )}
           {value === 2 && (
-            <Box
-              display="grid"
-              gap={4}
-              gridTemplateColumns={{ xs: "1fr", lg: "1fr 1fr" }}
-            >
+            <Box display="grid" gap={4} gridTemplateColumns="1fr">
               {screens.map(({ src, alt, width, height }) => (
                 <Image
                   key={src}
@@ -482,80 +339,6 @@ const IndexPage = ({ version, date, platforms }: IndexPageProps) => {
                 />
               ))}
             </Box>
-          )}
-          {value === 3 && (
-            <>
-              <Typography sx={{ mb: 2, width: "100%" }} textAlign="justify">
-                Tilesets:{" "}
-                <Link
-                  href="https://twitter.com/ElvGames"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  ElvGames
-                </Link>
-              </Typography>
-              <Typography sx={{ mb: 2, width: "100%" }} textAlign="justify">
-                Animations Spritesheets:{" "}
-                <Link
-                  href="https://bdragon1727.itch.io/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  BDragon1727
-                </Link>
-              </Typography>
-              <Typography sx={{ mb: 2, width: "100%" }} textAlign="justify">
-                Characters Spritesheets:{" "}
-                <Link
-                  href="https://twitter.com/ElvGames"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  ElvGames
-                </Link>
-              </Typography>
-              <Typography sx={{ mb: 2, width: "100%" }} textAlign="justify">
-                Fight music:{" "}
-                <Link
-                  href="https://opengameart.org/users/flixberry-entertainment"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Flixberry Entertainment
-                </Link>
-              </Typography>
-              <Typography sx={{ mb: 2, width: "100%" }} textAlign="justify">
-                Musics:{" "}
-                <Link
-                  href="https://sonatina.itch.io/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Sara Garrard
-                </Link>
-              </Typography>
-              <Typography sx={{ mb: 2, width: "100%" }} textAlign="justify">
-                Font:{" "}
-                <Link
-                  href="https://fonts.google.com/?query=Matt+McInerney"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Matt McInerney
-                </Link>
-              </Typography>
-              <Typography sx={{ mb: 2, width: "100%" }} textAlign="justify">
-                Icons:{" "}
-                <Link
-                  href="https://game-icons.net/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Game-icons
-                </Link>
-              </Typography>
-            </>
           )}
         </Container>
       </Box>
