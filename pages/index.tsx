@@ -2,6 +2,7 @@ import type { GetServerSideProps } from "next";
 import type { OsIconType } from "../components/OsIcon";
 import type { Version } from "./api/version";
 
+import { PlayCircleRounded } from "@mui/icons-material";
 import DownloadsIcon from "@mui/icons-material/CloudDownloadRounded";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Box from "@mui/material/Box";
@@ -160,6 +161,33 @@ const IndexPage = ({ version, date, platforms }: IndexPageProps) => {
             gridTemplateColumns={{ md: "1fr 1fr", sm: "1fr" }}
             justifyItems="center"
           >
+            <CustomButton
+              fullWidth
+              color="inherit"
+              disabled={atLeastOneIsUpdating}
+              href="https://unforeseen-conspiracy-inc.vercel.app/"
+              rel="noreferrer"
+              size="large"
+              startIcon={
+                <PlayCircleRounded
+                  color="primary"
+                  sx={{ fontSize: 20, mr: 1 }}
+                />
+              }
+              sx={{
+                textDecoration: "none",
+                width: "100%",
+                gridColumn: { md: "span 2", sm: "span 1" },
+              }}
+              target="_blank"
+              variant="contained"
+            >
+              <Typography
+                fontStyle={atLeastOneIsUpdating ? "italic" : "normal"}
+              >
+                Play in the browser
+              </Typography>
+            </CustomButton>
             {platforms.map(
               ({
                 name,
