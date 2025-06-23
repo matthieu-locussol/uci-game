@@ -16,35 +16,6 @@ import { CustomButton } from "../components/CustomButton";
 import { StyledTab, StyledTabs } from "../components/CustomTabs";
 import { OsIcons } from "../components/OsIcon";
 
-const features = [
-  "Launcher with auto-update",
-  "Automated maintenance mode (when deploying new version on GitHub)",
-  "Double login invalidation system",
-  "Discord Rich Presence integration",
-  "Multiple languages support using i18n (English, French & Japanese)",
-  "Multiple maps made with Tiled",
-  "Leveling system (from 1 to 200)",
-  "Click-based and keyboard-based movement on a grid",
-  "Chat with multiple channels and private messages",
-  "Ranks and permissions",
-  "Character creation, customization and deletion",
-  "Statistics and leveling points",
-  "Talent tree (PoE-like) with multiple starting points",
-  "Teleporter system to move between maps (cost money)",
-  "Inventory & equipments (different types of equipments like weapons, chestplates, helmets, etc.)",
-  "Inventory sorting system",
-  "Recycling system to get gachix, in-game currency to get items from a gatcha machine",
-  "Loot system with multiple rarities and affixes (diablo-like)",
-  "Wild battles (PvE) with random monster groups (normal, rare & epic monster rarities)",
-  "Automated turn-based battles with adjustable speed",
-  "Dodge, critical hit, thorns & life steal mechanics",
-  "Interactive objects and player with context menu on click",
-  "Dialog system with NPCs and objects",
-  "Community menu to see online players",
-  "Settings menu and preferences saving in local storage",
-  "In-game minimap & grid overlay toggles",
-];
-
 const screens = [
   {
     src: "/screenshots/0.png",
