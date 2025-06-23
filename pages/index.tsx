@@ -21,62 +21,20 @@ const screens = [
   {
     src: "/screenshots/0.png",
     alt: "Screenshot 1",
-    width: 2488,
-    height: 1598,
+    width: 2784,
+    height: 1824,
   },
   {
     src: "/screenshots/1.png",
     alt: "Screenshot 2",
-    width: 2038,
-    height: 1576,
+    width: 2784,
+    height: 1824,
   },
   {
     src: "/screenshots/2.png",
     alt: "Screenshot 3",
-    width: 2042,
-    height: 1578,
-  },
-  {
-    src: "/screenshots/3.png",
-    alt: "Screenshot 4",
-    width: 2042,
-    height: 1578,
-  },
-  {
-    src: "/screenshots/4.png",
-    alt: "Screenshot 5",
-    width: 2444,
-    height: 1558,
-  },
-  {
-    src: "/screenshots/5.png",
-    alt: "Screenshot 6",
-    width: 2438,
-    height: 1554,
-  },
-  {
-    src: "/screenshots/6.png",
-    alt: "Screenshot 7",
-    width: 2084,
-    height: 1606,
-  },
-  {
-    src: "/screenshots/7.png",
-    alt: "Screenshot 8",
-    width: 2080,
-    height: 1598,
-  },
-  {
-    src: "/screenshots/8.png",
-    alt: "Screenshot 9",
-    width: 2082,
-    height: 1610,
-  },
-  {
-    src: "/screenshots/9.png",
-    alt: "Screenshot 10",
-    width: 2078,
-    height: 1604,
+    width: 2784,
+    height: 1824,
   },
 ];
 
@@ -323,17 +281,13 @@ const IndexPage = ({ version, date, platforms }: IndexPageProps) => {
             </Typography>
           )}
           {value === 2 && (
-            <Box display="grid" gap={4} gridTemplateColumns="1fr">
+            <Box display="grid" gridTemplateColumns="1fr">
               {screens.map(({ src, alt, width, height }) => (
                 <Image
                   key={src}
                   alt={alt}
                   height={SCREENSHOT_WIDTH * (height / width)}
                   src={src}
-                  style={{
-                    border: "2px solid #111827",
-                    borderRadius: 8,
-                  }}
                   width={SCREENSHOT_WIDTH}
                 />
               ))}
